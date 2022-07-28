@@ -47,4 +47,11 @@ Class PrintNavigation extends GetNavigation {
       }
     echo '</ul>';
   }
+  public function listeRouteForm($variable, $securiter) {
+    echo '<ul>';
+      foreach ($variable as $key => $value) {
+        echo '<li>'.$securiter[$value['securiter']].' | '.$value['chemin'].' |Action => encodeRoutage('.$value['idForm'].')</li>';
+      }
+    echo '</ul>';
+  }
 }

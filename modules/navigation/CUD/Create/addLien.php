@@ -12,7 +12,7 @@ for ($i=0; $i < 8 ; $i++) {
 }
 //Fin controle de la qualité
 //Création du token du target route
-$_POST['targetRoute'] =  genToken (16);
+$_POST['targetRoute'] =  IntToken (16);
 //Fin création token
 if($controleForm == $qualite) {
   $insert = "INSERT INTO `navigation`(`nomNav`, `cheminNav`, `menuVisible`, `zoneMenu`, `ordre`, `niveau`, `deroulant`, `targetRoute`)

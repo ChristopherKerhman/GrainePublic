@@ -1,5 +1,4 @@
 <?php
-include 'functions/formFunction.php';
 $formInscription = [['name'=>'email', 'message'=>'Votre email', 'type'=>0],
                     ['name'=>'prenom', 'message'=>'Votre prenom', 'type'=>0],
                     ['name'=>'nom', 'message'=>'Votre nom', 'type'=>0],

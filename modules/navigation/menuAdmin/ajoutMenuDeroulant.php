@@ -1,6 +1,5 @@
 <?php
   include 'arrayInterne/roles.php';
-  include 'functions/formFunction.php';
 ?>
 <h3>Ajouter un nouveau menu déroulant</h3>
 <form class="formulaireClassique" action="<?=encodeRoutage(6)?>" method="post">

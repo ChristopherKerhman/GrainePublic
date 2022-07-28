@@ -1,5 +1,4 @@
 <?php
-include 'functions/formFunction.php';
 $formInscription = [['name'=>'login', 'message'=>'Votre login', 'type'=>0],
                     ['name'=>'mdp', 'message'=>'Votre mot de passe', 'type'=>9]];
 $button = 'Connexion';

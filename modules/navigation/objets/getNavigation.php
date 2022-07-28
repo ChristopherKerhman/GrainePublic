@@ -13,7 +13,7 @@ Class GetNavigation {
     return $dataNav->READ();
   }
   public function getContenus($idNav) {
-    $select = "SELECT `cheminNav`,  `niveau`, `targetRoute` FROM `navigation` WHERE `targetRoute` = :targetRoute AND  `valide` = 1";
+    $select = "SELECT  `cheminNav`,  `niveau`, `targetRoute` FROM `navigation` WHERE `targetRoute` = :targetRoute AND  `valide` = 1";
     $param = [['prep'=>'targetRoute', 'variable'=>$idNav]];
     $getNav = new RCUD($select, $param);
     return $getNav->READ();
@@ -29,5 +29,11 @@ Class GetNavigation {
     $void = array();
     $readData = new RCUD($select, $void);
     return $readData->READ();
+  }
+  public function toutesRoutesForm() {
+      $select = "SELECT `idForm`, `chemin`, `securiter` FROM `routageForm` WHERE `valide` = 1 ORDER BY `securiter` DESC, `idForm`";
+      $void = array();
+      $readData = new RCUD($select, $void);
+      return $readData->READ();
   }
 }

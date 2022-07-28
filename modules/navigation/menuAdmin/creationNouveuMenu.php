@@ -1,5 +1,4 @@
 <?php
-  include 'functions/formFunction.php';
   $yes = ['Non', 'Oui'];
   include 'arrayInterne/roles.php';
   $dataMenuDeroulant = $readNav->getMenuDeroulant();
