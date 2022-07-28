@@ -21,4 +21,15 @@ class Preparation {
       array_push($prepare, ['prep' => ':idUser', 'variable' => $_SESSION['idUser']]);
       return $prepare;
   }
+  public function creationPrepTokenUser ($data) {
+    foreach ($data as $key => $value) {
+      $prepare = array();
+      foreach ($data as $key => $value) {
+        $value = filter($value);
+        array_push($prepare, ['prep' => ':'.$key, 'variable' => $value]);
+      }
+    }
+      array_push($prepare, ['prep' => ':token', 'variable' => $_SESSION['tokenConnexion']]);
+      return $prepare;
+  }
 }

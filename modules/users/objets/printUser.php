@@ -52,4 +52,15 @@ private $yes;
           }
     echo '</table>';}
   }
+  public function printProfilUser ($variable) {
+    echo '<ul>';
+      foreach ($variable as $key => $value) {
+        echo '<li>Identité : '.$value['prenom'].' '.$value['nom'].'</li>';
+        echo '<li>Pseudo : '.$value['login'].'</li>';
+        echo '<li>Role : '.$this->role[$value['role']].'</li>';
+        echo '<li>Date d\'inscription : '.brassageDate($value['dateCreation']).'</li>';
+      }
+    echo '</ul>';
+  }
+
 }

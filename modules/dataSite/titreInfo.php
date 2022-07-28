@@ -1,4 +1,4 @@
-<form class="formulaireClassique" action="<?php require 'functions/formFunction.php'; echo encodeRoutage(5); ?>" method="post">
+<form class="formulaireClassique" action="<?php echo encodeRoutage(5); ?>" method="post">
   <h3>Les éléments constituants le site</h3>
   <label for="titre">Titre actuel : <?=$title?></label>
   <input id="titre" type="text" name="titre" value="<?=$title?>">

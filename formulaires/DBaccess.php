@@ -28,7 +28,7 @@ if($securiter == 0) {
     header('location:../../index.php?message=Erreur de traitement');
   }
 } else  {
-            if(($securiter == $_SESSION['role'])&&($border == 1)) {
+            if(($_SESSION['role'] >= $securiter)&&($border == 1)) {
                 if(filter($_POST['idNav'] > 0)) {
                   $idNav = filter($_POST['idNav']);
                   array_pop($_POST);
