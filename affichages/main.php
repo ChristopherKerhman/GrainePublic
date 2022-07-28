@@ -27,13 +27,11 @@ if (isset($_GET['message'])) {echo '<h3>'.filter($_GET['message']).'</h3>';}
           } else {
               include 'modules/navigation/pageGeneral.php';
           }
-
         } elseif((isset($_SESSION['role']))&&($_SESSION['role'] >= $chemin[0]['niveau'])) {
           include $chemin[0]['cheminNav'];
         } else {
           include 'modules/navigation/pageGeneral.php';
         }
-
     }
   } else {
     $idNav = 0;
