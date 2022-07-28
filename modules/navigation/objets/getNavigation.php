@@ -14,7 +14,7 @@ Class GetNavigation {
   }
   public function getContenus($idNav) {
     $select = "SELECT  `cheminNav`,  `niveau`, `targetRoute` FROM `navigation` WHERE `targetRoute` = :targetRoute AND  `valide` = 1";
-    $param = [['prep'=>'targetRoute', 'variable'=>$idNav]];
+    $param = [['prep'=>':targetRoute', 'variable'=>$idNav]];
     $getNav = new RCUD($select, $param);
     return $getNav->READ();
   }

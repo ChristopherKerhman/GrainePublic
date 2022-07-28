@@ -15,29 +15,17 @@ if (isset($_GET['message'])) {echo '<h3>'.filter($_GET['message']).'</h3>';}
     $idNav = filter($_GET['idNav']);
     $chemin = $readNav->getContenus($idNav);
     if($chemin == []) {
-        include 'modules/navigation/pageGeneral.php';
+        //include '';
 
     } else {
       if($dev) {
         echo $chemin[0]['cheminNav'];
       }
-        if(($_SESSION == [])&&($chemin[0]['niveau'] == 0)) {
-          if($chemin[0]['niveau'] == 0) {
-            include $chemin[0]['cheminNav'];
-          } else {
-              include 'modules/navigation/pageGeneral.php';
-          }
-
-        } elseif((isset($_SESSION['role']))&&($_SESSION['role'] >= $chemin[0]['niveau'])) {
-          include $chemin[0]['cheminNav'];
-        } else {
-          include 'modules/navigation/pageGeneral.php';
-        }
-
+        include $chemin[0]['cheminNav'];
     }
   } else {
     $idNav = 0;
-    include 'modules/navigation/pageGeneral.php';
+    //include '';
   }
 ?>
 </section>
