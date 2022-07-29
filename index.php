@@ -8,6 +8,5 @@ include   $cheminFonctions.'formFunction.php';
 include   $cheminCorps.'kether.php';
 include   $cheminCorps.'head.php';
 include   $cheminCorps.'navHigh.php';
-include   $cheminObjetsNavigation.'bandeau.php';
 include   $cheminCorps.'main.php';
 include   $cheminCorps.'foot.php';

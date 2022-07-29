@@ -5,7 +5,11 @@
   require 'modules/users/objets/printUser.php';
   $user = new PrintUser();
   $dataUser = $user->getProfil($_SESSION['tokenConnexion']);
+  echo '<div class="flex-rows">';
+  echo '<article>';
   $user->printProfilUser ($dataUser);
+  echo '</article>';
+  echo '<aside class="flex-colonne">';
   // Modifier step by step
   //Email
   $formModifierProfil = [['name'=>'email', 'message'=>'Votre email', 'type'=>0, 'lastInput'=>$dataUser[0]['email']]];
@@ -20,3 +24,5 @@
                         ['name'=>'mdpA', 'message'=>'Confirmer votre nouveau mot de passe', 'type'=>9, 'lastInput'=>'????']];
     $button = 'Modifier mot de passe';
   formModification(18, $formModifierProfil, $idNav, $button);
+  echo '</aside>';
+echo '</div>';

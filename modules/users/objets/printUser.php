@@ -53,7 +53,8 @@ private $yes;
     echo '</table>';}
   }
   public function printProfilUser ($variable) {
-    echo '<ul>';
+    echo '<ul class="listeProfil">';
+      echo '<li><h4>Votre profil</h4></li>';
       foreach ($variable as $key => $value) {
         echo '<li>Identité : '.$value['prenom'].' '.$value['nom'].'</li>';
         echo '<li>Pseudo : '.$value['login'].'</li>';
